@@ -52,7 +52,7 @@ if __name__ == '__main__':
 		import os
 		print 'This is a script to download images from 4chan.'
 <<<<<<< HEAD
-		print 'usage: %s http://server.com/lulz/faggot/ [directory]' % os.path.basename(sys.argv[0])
+		print 'usage: %s http://server.com/ [directory]' % os.path.basename(sys.argv[0])
 =======
 		print 'usage: %s http://server.com/' % os.path.basename(sys.argv[0])
 >>>>>>> ac9d7d6e0f43f8f4747dab9f1e9fe45337d13055
