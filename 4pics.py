@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 import urllib2
 import sys
@@ -6,7 +6,7 @@ import re
 import threading
 
 def get_images(url):
-	r = re.compile('https://images.4chan.org/[^"]*(?:.jpg|.jpeg|.bmp|.gif|.png)')
+	r = re.compile('//images.4chan.org/[^"]*(?:.jpg|.jpeg|.bmp|.gif|.png)')
 	return r.findall(urllib2.urlopen(url).read())
 
 def download(url, folder = ''):
@@ -35,6 +35,7 @@ if __name__ == '__main__':
 			for i in list:
 				if i not in done:
 					done.append(i)
+					i = 'https:%s' % i 
 					print i
 					if len(sys.argv) == 3:
 						thread = Download(i, sys.argv[2])
